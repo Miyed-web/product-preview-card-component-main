@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@400;500;700&display=swap');
+
+:root{
+ --DarkCyan: hsl(158, 36%, 37%);
+--creamColor: hsl(30, 38%, 92%);
+--veryDarkBlue: hsl(212, 21%, 14%);
+--darkGrayishBlue: hsl(228, 12%, 48%);
+--white: hsl(0, 0%, 100%);
+--primaryFont:'Montserrat', sans-serif;
+--secFont:'Fraunces', serif;
+
+}
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html, body{
+  height: 100%;
+}
+body{
+  background:var(--creamColor) ;
+  font-family: var(--primaryFont);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  
+}
+h2,h6{
+  font-weight: 700;
+  font-family: var(--secFont);
+ margin-bottom: 15px;
+}
+p{
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.container{
+  display: flex;
+  width: 600px;
+}
+.card-img{
+  flex-basis: 50%;
+}
+.card-img img.img-desktop{
+  border-radius: 10px 0 0 10px;
+  display: block;
+}
+
+.card-img img.img-mobile{
+  border-radius: 10px 10px 0 0;
+  display: none;
+}
+.card-text{
+  flex-basis: 50%;
+  background: var(--white);
+  border-radius:0 10px 10px 0;
+  padding: 30px;
+}
+.card-text h2{
+  font-size: 32px;
+  color:var(--veryDarkBlue);
+  line-height: 1em;
+}
+.card-text h6{
+  letter-spacing: 4.8px;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: var(--primaryFont);
+  text-transform: uppercase;
+  color: var(--darkGrayishBlue);
+}
+.card-text p{
+  font-size: 14px;
+  color: var(--darkGrayishBlue);
+  line-height: 1.4em;
+}
+.card-text p.price{
+  font-family: var(--secFont);
+  color: var(--DarkCyan);
+  font-size: 32px;
+}
+.card-text p.price span{
+  font-size: 14px;
+  position: relative;
+  top: -5px;
+  text-decoration: line-through;
+  color: var(--darkGrayishBlue);
+  font-family: var(--primaryFont);
+}
+.card-text button {
+  width: 100%;
+  padding: 15px;
+  background: var(--DarkCyan);
+  border: 0;
+  border-radius: 10px;
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+}
+.card-text button img {
+  position:relative;
+  top: 3px;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+
+@media only screen and (max-width:600px){
+  body{
+    align-items: flex-start ;
+    padding: 20px 10px 20px 10px;
+  }
+  .container{
+    flex-direction: column;
+    width: 90%;
+   
+  }
+  .card-img img.img-desktop{
+  display: none;
+}
+
+.card-img img.img-mobile{
+  
+  display: block;
+}
+.card-text {
+  border-radius: 0 0 10px 10px;
+}
+}
