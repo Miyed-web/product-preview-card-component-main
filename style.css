@@ -105,6 +105,9 @@ img{
   color: var(--white);
   text-align: center;
 }
+.card-text button:hover{
+  background: var(--veryDarkBlue);
+ }
 .card-text button img {
   position:relative;
   top: 3px;
